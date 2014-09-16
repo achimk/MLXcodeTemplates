@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.BaseViewControllers</string>
+        
+        <key>Name</key>
+        <string>Base View Controllers</string>
+        
+        <key>Description</key>
+        <string>Base subclasses of UIViewController.</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Definitions</key>
+        <dict>
+            <key>Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>ViewController.h</string>
+            </dict>
+            <key>Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>ViewController.m</string>
+            </dict>
+
+
+            <key>Controllers/___VARIABLE_classPrefix:identifier___TableViewController.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>TableViewController.h</string>
+            </dict>
+            <key>Controllers/___VARIABLE_classPrefix:identifier___TableViewController.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>TableViewController.m</string>
+            </dict>
+            
+            <key>Controllers/___VARIABLE_classPrefix:identifier___CollectionViewController.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>CollectionViewController.h</string>
+            </dict>
+            <key>Controllers/___VARIABLE_classPrefix:identifier___CollectionViewController.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>CollectionViewController.m</string>
+            </dict>
+
+            <key>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>NavigationController.h</string>
+            </dict>
+            <key>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Controllers</string>
+                    <string>Abstract</string>
+                </array>
+                <key>Path</key>
+                <string>NavigationController.m</string>
+            </dict>
+        </dict>
+        
+        <key>Nodes</key>
+        <array>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___TableViewController.h</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___TableViewController.m</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___CollectionViewController.h</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___CollectionViewController.m</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.h</string>
+            <string>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.m</string>
+        </array>
+        
+        <key>Options</key>
+        <array>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

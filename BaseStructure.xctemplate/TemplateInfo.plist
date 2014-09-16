@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.BaseStructure</string>
+        
+        <key>Name</key>
+        <string>Base Structure</string>
+        
+        <key>Description</key>
+        <string>Base application structure.</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Definitions</key>
+        <dict>                        
+            <key>Controllers/</key>
+            <dict>
+                <key>Path</key>
+                <string>Controllers</string>
+                <key>TargetIndices</key>
+                <array/>
+            </dict>
+
+            <key>Models/</key>
+            <dict>
+                <key>Path</key>
+                <string>Models</string>
+                <key>TargetIndices</key>
+                <array/>
+            </dict>
+            
+            <key>Views/</key>
+            <dict>
+                <key>Path</key>
+                <string>Views</string>
+                <key>TargetIndices</key>
+                <array/>
+            </dict>
+            
+            <key>Categories/</key>
+            <dict>
+                <key>Path</key>
+                <string>Categories</string>
+                <key>TargetIndices</key>
+                <array/>
+            </dict>
+            
+            <key>Resources/</key>
+            <dict>
+                <key>Path</key>
+                <string>Resources</string>
+                <key>TargetIndices</key>
+                <array/>
+            </dict>
+
+            <key>___VARIABLE_classPrefix:identifier___Defines.h</key>
+            <dict>
+                <key>Path</key>
+                <string>Defines.h</string>
+            </dict>
+            <key>___VARIABLE_classPrefix:identifier___Constants.h:Setup</key>
+            <dict>
+                <key>Beginning</key>
+                <string>//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//
+
+                </string>
+                <key>End</key>
+                <string>
+                </string>
+                <key>Indent</key>
+                <integer>0</integer>
+            </dict>
+            <key>___VARIABLE_classPrefix:identifier___Constants.m:Setup</key>
+            <dict>
+                <key>Beginning</key>
+                <string>//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//
+                    
+#import "___VARIABLE_classPrefix:identifier___Constants.h"
+                </string>
+                <key>End</key>
+                <string>
+                </string>
+                <key>Indent</key>
+                <integer>0</integer>
+            </dict>
+        </dict>
+        
+        <key>Nodes</key>
+        <array>
+            <string>___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+            <string>___PACKAGENAME___-Prefix.pch:objC:importUIKit</string>
+            <string>___PACKAGENAME___-Prefix.pch:import:___VARIABLE_classPrefix:identifier___Defines.h</string>
+            <string>___PACKAGENAME___-Prefix.pch:import:___VARIABLE_classPrefix:identifier___Constants.h</string>
+            <string>Resources/</string>
+            <string>Categories/</string>
+            <string>Views/</string>
+            <string>Models/</string>
+            <string>Controllers/</string>
+            <string>___VARIABLE_classPrefix:identifier___Defines.h</string>
+            <string>___VARIABLE_classPrefix:identifier___Constants.h:Setup</string>
+            <string>___VARIABLE_classPrefix:identifier___Constants.m:Setup</string>
+        </array>
+        
+        <key>Options</key>
+        <array>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

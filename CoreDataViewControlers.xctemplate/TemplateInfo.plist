@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.CoreDataViewControllers</string>
+        
+        <key>Name</key>
+        <string>Core Data View Controllers</string>
+        
+        <key>Description</key>
+        <string>Base subclasses for NSFetchedResultsController.</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Options</key>
+        <array>
+            <dict>
+                <key>Default</key>
+                <string>false</string>
+                
+                <key>Description</key>
+                <string>Whether the new project should include CoreData view controllers.</string>
+                
+                <key>Identifier</key>
+                <string>useCoreDataViewControllers</string>
+                
+                <key>Name</key>
+                <string>Include CoreData view controllers</string>
+                
+                <key>SortOrder</key>
+                <integer>1</integer>
+                
+                <key>Type</key>
+                <string>checkbox</string>
+                
+                <key>Units</key>
+                <dict>
+                    <key>false</key>
+                    <array>
+                    </array>
+                    
+                    <key>true</key>
+                    <array>
+                        <dict>
+                            <key>Definitions</key>
+                            <dict>
+                                <key>___PACKAGENAME___-Prefix.pch:objC:importCoreData</key>
+                                <string>#import &lt;CoreData/CoreData.h&gt;</string>
+                                
+                                <key>___VARIABLE_classPrefix:identifier___Constants.h:Setup:CoreData</key>
+                                <string>typedef NS_ENUM(NSUInteger, ___VARIABLE_classPrefix:identifier___ChangeType) {
+    ___VARIABLE_classPrefix:identifier___ChangeTypeIgnore,
+    ___VARIABLE_classPrefix:identifier___ChangeTypeUpdate,
+    ___VARIABLE_classPrefix:identifier___ChangeTypeReload
+};
+                                    
+extern const NSUInteger ___VARIABLE_classPrefix:identifier___FetchedResultsBatchSize;
+                                </string>
+                                
+                                <key>___VARIABLE_classPrefix:identifier___Constants.m:Setup:CoreData</key>
+                                <string>const NSUInteger ___VARIABLE_classPrefix:identifier___FetchedResultsBatchSize       = 20;</string>
+                                
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedViewController.h</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedViewController.h</string>
+                                </dict>
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedViewController.m</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedViewController.m</string>
+                                </dict>
+                                
+                                
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedTableViewController.h</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedTableViewController.h</string>
+                                </dict>
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedTableViewController.m</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedTableViewController.m</string>
+                                </dict>
+                                
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedCollectionViewController.h</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedCollectionViewController.h</string>
+                                </dict>
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___FetchedCollectionViewController.m</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>FetchedCollectionViewController.m</string>
+                                </dict>
+                            </dict>
+                            
+                            <key>Nodes</key>
+                            <array>
+                                <string>___PACKAGENAME___-Prefix.pch:objC:importCoreData</string>
+                                <string>___VARIABLE_classPrefix:identifier___Constants.h:Setup:CoreData</string>
+                                <string>___VARIABLE_classPrefix:identifier___Constants.m:Setup:CoreData</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedViewController.h</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedViewController.m</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedTableViewController.h</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedTableViewController.m</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedCollectionViewController.h</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___FetchedCollectionViewController.m</string>
+                            </array>
+                            
+                            <key>Targets</key>
+                            <array>
+                                <dict>
+                                    <key>Frameworks</key>
+                                    <array>
+                                        <string>CoreData</string>
+                                    </array>
+                                </dict>
+                            </array>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

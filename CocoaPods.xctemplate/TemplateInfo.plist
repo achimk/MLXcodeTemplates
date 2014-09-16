@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.CocoaPods</string>
+        
+        <key>Name</key>
+        <string>Podfile checkbox</string>
+        
+        <key>Description</key>
+        <string>Include CocoaPods Podfile checkbox.</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Options</key>
+        <array>
+            <dict>
+                <key>Default</key>
+                <string>false</string>
+                
+                <key>Identifier</key>
+                <string>useCocoaPods</string>
+                
+                <key>Name</key>
+                <string>Include Podfile</string>
+                
+                <key>Description</key>
+                <string>Include CocoaPods Podfile.</string>
+                
+                <key>SortOrder</key>
+                <integer>1</integer>
+                
+                <key>Type</key>
+                <string>checkbox</string>
+                
+                <key>Units</key>
+                <dict>
+                    <key>false</key>
+                    <array>
+                    </array>
+                    
+                    <key>true</key>
+                    <array>
+                        <dict>
+                            <key>Definitions</key>
+                            <dict>
+                                <key>../Podfile</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <string>Supporting Files</string>
+                                    <key>Path</key>
+                                    <string>Podfile</string>
+                                    <key>TargetIndices</key>
+                                    <array/>
+                                </dict>
+                            </dict>
+                            
+                            <key>Nodes</key>
+                            <array>
+                                <string>../Podfile</string>
+                            </array>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

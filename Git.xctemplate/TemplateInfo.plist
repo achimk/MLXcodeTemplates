@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.Gitignore</string>
+        
+        <key>Name</key>
+        <string>Gitignore checkbox</string>
+        
+        <key>Description</key>
+        <string>Include .gitignore checkbox</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Options</key>
+        <array>
+            <dict>
+                <key>Default</key>
+                <string>false</string>
+                
+                <key>Identifier</key>
+                <string>useGitIgnore</string>
+                
+                <key>Name</key>
+                <string>Include .gitignore</string>
+                
+                <key>Description</key>
+                <string>Include .gitignore file</string>
+                
+                <key>SortOrder</key>
+                <integer>1</integer>
+                
+                <key>Type</key>
+                <string>checkbox</string>
+                
+                <key>Units</key>
+                <dict>
+                    <key>false</key>
+                    <array>
+                    </array>
+                    
+                    <key>true</key>
+                    <array>
+                        <dict>
+                            <key>Definitions</key>
+                            <dict>
+                                <key>../.gitignore</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <string>Supporting Files</string>
+                                    <key>Path</key>
+                                    <string>gitignore</string>
+                                    <key>TargetIndices</key>
+                                    <array/>
+                                </dict>
+                            </dict>
+                            
+                            <key>Nodes</key>
+                            <array>
+                                <string>../.gitignore</string>
+                            </array>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

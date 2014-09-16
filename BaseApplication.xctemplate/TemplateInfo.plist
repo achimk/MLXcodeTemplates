@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Name</key>
+	<string>Empty Application</string>
+    
+    <key>Description</key>
+	<string>This template provides a starting point for an application using custom base view controllers. It provides an reusable subclasses of UIViewControllers. When the Core Data option is enabled, the application is configured with additional view controllers for managed objects.
+    </string>
+    
+	<key>Identifier</key>
+	<string>com.mlcontrollerspack.baseApplication</string>
+    
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    
+	<key>Ancestors</key>
+	<array>
+        <string>com.mlcontrollerspack.objectiveCApplication</string>
+        <string>com.apple.dt.unit.iPhoneBase</string>
+        <string>com.apple.dt.unit.prefixable</string>
+        <string>com.mlcontrollerspack.BaseStructure</string>
+        <string>com.mlcontrollerspack.BaseViewControllers</string>
+        <string>com.mlcontrollerspack.CoreDataViewControllers</string>
+        <string>com.mlcontrollerspack.CocoaPods</string>
+        <string>com.mlcontrollerspack.Gitignore</string>
+	</array>
+    
+	<key>Concrete</key>
+	<true/>
+    
+	<key>Definitions</key>
+	<dict>
+        <key>main.m</key>
+        <dict>
+            <key>Group</key>
+            <string>Supporting Files</string>
+            <key>Path</key>
+            <string>main.m</string>
+        </dict>
+        
+        <key>___VARIABLE_classPrefix:identifier___AppDelegate.h</key>
+        <dict>
+            <key>Path</key>
+            <string>AppDelegate.h</string>
+        </dict>
+        <key>___VARIABLE_classPrefix:identifier___AppDelegate.m</key>
+        <dict>
+            <key>Path</key>
+            <string>AppDelegate.m</string>
+        </dict>
+	</dict>
+    
+	<key>Nodes</key>
+	<array>
+        <string>main.m</string>
+        <string>___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+        <string>___VARIABLE_classPrefix:identifier___AppDelegate.m</string>
+	</array>
+    
+	<key>Options</key>
+	<array>
+	</array>
+    
+	<key>SortOrder</key>
+	<integer>1</integer>
+</dict>
+</plist>
