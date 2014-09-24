@@ -28,3 +28,10 @@ mkdir -p "$installDirectory"
 
 # Copy all of the xctemplate folders into the install directory.
 cp -r *.xctemplate "$installDirectory"
+
+# Create empty directories that the project templates will copy.
+mkdir -p "$installDirectory"/"BaseStructure.xctemplate/Resources"
+mkdir -p "$installDirectory"/"BaseStructure.xctemplate/Categories"
+mkdir -p "$installDirectory"/"BaseStructure.xctemplate/Views"
+mkdir -p "$installDirectory"/"BaseStructure.xctemplate/Models"
+mkdir -p "$installDirectory"/"BaseStructure.xctemplate/Controllers"
