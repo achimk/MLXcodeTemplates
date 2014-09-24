@@ -27,6 +27,14 @@
     return [UICollectionViewFlowLayout class];
 }
 
+#pragma mark Dealloc
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSCurrentLocaleDidChangeNotification
+                                                  object:nil];
+}
+
 #pragma mark Init
 
 - (id)initWithCollectionViewLayout:(UICollectionViewLayout *)layout {
@@ -47,6 +55,7 @@
     [super finishInitialize];
     
     _needsReload = NO;
+    _reloadOnCurrentLocaleChange = NO;
     _reloadOnAppearsFirstTime = YES;
     _clearsSelectionOnViewWillAppear = YES;
     _clearsSelectionOnReloadData = NO;
@@ -65,6 +74,15 @@
         UICollectionViewLayout * layout = [[[self class] defaultCollectionViewLayoutClass] new];
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(currentLocaleDidChangeNotification:)
+                                                 name:NSCurrentLocaleDidChangeNotification
+                                               object:nil];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -193,6 +211,19 @@
         
         for (NSIndexPath * indexPath in selectedItems) {
             [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        }
+    }
+}
+
+#pragma mark Notifications
+
+- (void)currentLocaleDidChangeNotification:(NSNotification *)aNotification {
+    if (self.reloadOnCurrentLocaleChange) {
+        if (self.isViewVisible) {
+            [self reloadData];
+        }
+        else {
+            [self setNeedsReload];
         }
     }
 }

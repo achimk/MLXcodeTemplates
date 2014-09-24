@@ -14,6 +14,7 @@
 @property (nonatomic, readonly, strong) UICollectionViewLayout * collectionViewLayout;
 @property (nonatomic, readwrite, assign) BOOL clearsSelectionOnViewWillAppear;
 @property (nonatomic, readwrite, assign) BOOL clearsSelectionOnReloadData;
+@property (nonatomic, readwrite, assign) BOOL reloadOnCurrentLocaleChange;
 @property (nonatomic, readwrite, assign) BOOL reloadOnAppearsFirstTime;
 @property (nonatomic, readwrite, assign) BOOL showsBackgroundView;
 
@@ -33,5 +34,11 @@
 @interface ___VARIABLE_classPrefix:identifier___CollectionViewController (___VARIABLE_classPrefix:identifier___SubclassOnly)
 
 - (UIView *)backgroundViewForCollectionView:(UICollectionView *)collectionView;
+
+@end
+
+@interface ___VARIABLE_classPrefix:identifier___CollectionViewController (___VARIABLE_classPrefix:identifier___Notifications)
+
+- (void)currentLocaleDidChangeNotification:(NSNotification *)aNotification;
 
 @end

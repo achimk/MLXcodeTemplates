@@ -30,6 +30,14 @@
     return UITableViewStylePlain;
 }
 
+#pragma mark Dealloc
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSCurrentLocaleDidChangeNotification
+                                                  object:nil];
+}
+
 #pragma mark Init
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -44,6 +52,7 @@
     [super finishInitialize];
     
     _needsReload = NO;
+    _reloadOnCurrentLocaleChange = NO;
     _reloadOnAppearsFirstTime = YES;
     _clearsSelectionOnViewWillAppear = YES;
     _clearsSelectionOnReloadData = NO;
@@ -63,6 +72,15 @@
         self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:style];
         self.tableView.scrollsToTop = YES;
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(currentLocaleDidChangeNotification:)
+                                                 name:NSCurrentLocaleDidChangeNotification
+                                               object:nil];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -194,6 +212,19 @@
         
         for (NSIndexPath * indexPath in selectedItems) {
             [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+        }
+    }
+}
+
+#pragma mark Notifications
+
+- (void)currentLocaleDidChangeNotification:(NSNotification *)aNotification {
+    if (self.reloadOnCurrentLocaleChange) {
+        if (self.isViewVisible) {
+            [self reloadData];
+        }
+        else {
+            [self setNeedsReload];
         }
     }
 }

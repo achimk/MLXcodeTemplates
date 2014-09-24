@@ -104,6 +104,48 @@
                 <key>Path</key>
                 <string>NavigationController.m</string>
             </dict>
+            
+            <key>Views/___VARIABLE_classPrefix:identifier___TableViewCell.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Views</string>
+                    <string>UITableView Cells</string>
+                </array>
+                <key>Path</key>
+                <string>TableViewCell.h</string>
+            </dict>
+            <key>Views/___VARIABLE_classPrefix:identifier___TableViewCell.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Views</string>
+                    <string>UITableView Cells</string>
+                </array>
+                <key>Path</key>
+                <string>TableViewCell.m</string>
+            </dict>
+            
+            <key>Views/___VARIABLE_classPrefix:identifier___CollectionViewCell.h</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Views</string>
+                    <string>UICollectionView Cells</string>
+                </array>
+                <key>Path</key>
+                <string>CollectionViewCell.h</string>
+            </dict>
+            <key>Views/___VARIABLE_classPrefix:identifier___CollectionViewCell.m</key>
+            <dict>
+                <key>Group</key>
+                <array>
+                    <string>Views</string>
+                    <string>UICollectionView Cells</string>
+                </array>
+                <key>Path</key>
+                <string>CollectionViewCell.m</string>
+            </dict>
         </dict>
         
         <key>Nodes</key>
@@ -116,6 +158,10 @@
             <string>Controllers/___VARIABLE_classPrefix:identifier___CollectionViewController.m</string>
             <string>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.h</string>
             <string>Controllers/___VARIABLE_classPrefix:identifier___NavigationController.m</string>
+            <string>Views/___VARIABLE_classPrefix:identifier___TableViewCell.h</string>
+            <string>Views/___VARIABLE_classPrefix:identifier___TableViewCell.m</string>
+            <string>Views/___VARIABLE_classPrefix:identifier___CollectionViewCell.h</string>
+            <string>Views/___VARIABLE_classPrefix:identifier___CollectionViewCell.m</string>
         </array>
         
         <key>Options</key>

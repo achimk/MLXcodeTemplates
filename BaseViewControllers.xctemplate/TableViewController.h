@@ -13,6 +13,7 @@
 @property (nonatomic, readwrite, strong) IBOutlet UITableView * tableView;
 @property (nonatomic, readwrite, assign) BOOL clearsSelectionOnViewWillAppear;
 @property (nonatomic, readwrite, assign) BOOL clearsSelectionOnReloadData;
+@property (nonatomic, readwrite, assign) BOOL reloadOnCurrentLocaleChange;
 @property (nonatomic, readwrite, assign) BOOL reloadOnAppearsFirstTime;
 @property (nonatomic, readwrite, assign) BOOL showsBackgroundView;
 
@@ -32,5 +33,11 @@
 @interface ___VARIABLE_classPrefix:identifier___TableViewController (___VARIABLE_classPrefix:identifier___SubclassOnly)
 
 - (UIView *)backgroundViewForTableView:(UITableView *)tableView;
+
+@end
+
+@interface ___VARIABLE_classPrefix:identifier___TableViewController (___VARIABLE_classPrefix:identifier___Notifications)
+
+- (void)currentLocaleDidChangeNotification:(NSNotification *)aNotification;
 
 @end
