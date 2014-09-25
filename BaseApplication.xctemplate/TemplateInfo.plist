@@ -18,7 +18,7 @@
 	<key>Ancestors</key>
 	<array>
         <string>com.mlcontrollerspack.objectiveCApplication</string>
-        <string>com.apple.dt.unit.iPhoneBase</string>
+        <string>com.mlcontrollerspack.iPhoneBase</string>
         <string>com.mlcontrollerspack.prefixable</string>
         <string>com.mlcontrollerspack.BaseStructure</string>
         <string>com.mlcontrollerspack.BaseViewControllers</string>
