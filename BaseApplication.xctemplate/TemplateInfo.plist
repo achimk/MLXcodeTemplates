@@ -19,7 +19,7 @@
 	<array>
         <string>com.mlcontrollerspack.objectiveCApplication</string>
         <string>com.apple.dt.unit.iPhoneBase</string>
-        <string>com.apple.dt.unit.prefixable</string>
+        <string>com.mlcontrollerspack.prefixable</string>
         <string>com.mlcontrollerspack.BaseStructure</string>
         <string>com.mlcontrollerspack.BaseViewControllers</string>
         <string>com.mlcontrollerspack.CoreDataViewControllers</string>

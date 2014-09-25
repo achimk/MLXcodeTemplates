@@ -19,7 +19,7 @@
         </array>
         
         <key>Definitions</key>
-        <dict>                        
+        <dict>			
             <key>Controllers/</key>
             <dict>
                 <key>Path</key>
@@ -119,6 +119,17 @@
             <string>___VARIABLE_classPrefix:identifier___Constants.h:Setup</string>
             <string>___VARIABLE_classPrefix:identifier___Constants.m:Setup</string>
         </array>
+        
+        <key>Targets</key>
+		<array>
+			<dict>
+				<key>Frameworks</key>
+				<array>
+					<string>Foundation</string>
+					<string>UIKit</string>
+				</array>
+			</dict>
+		</array>
         
         <key>Options</key>
         <array>
