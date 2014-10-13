@@ -139,7 +139,7 @@
                 tableView.dataSource = self;
             }
             
-            if (!tableView.superview) {
+            if (!tableView.superview && self.isViewLoaded) {
                 tableView.translatesAutoresizingMaskIntoConstraints = NO;
                 [self.view addSubview:tableView];
                 

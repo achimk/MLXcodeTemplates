@@ -134,7 +134,7 @@
                 collectionView.dataSource = self;
             }
             
-            if (!collectionView.superview) {
+            if (!collectionView.superview && self.isViewLoaded) {
                 collectionView.translatesAutoresizingMaskIntoConstraints = NO;
                 [self.view addSubview:collectionView];
                 
