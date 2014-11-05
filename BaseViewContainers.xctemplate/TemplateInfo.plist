@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.mlcontrollerspack.ContainerViewControllers</string>
+        
+        <key>Name</key>
+        <string>Container View Controllers</string>
+        
+        <key>Description</key>
+        <string>Base subclasses for Container view controllers.</string>
+        
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        
+        <key>Ancestors</key>
+        <array>
+        </array>
+        
+        <key>Options</key>
+        <array>
+            <dict>
+                <key>Default</key>
+                <string>false</string>
+                
+                <key>Description</key>
+                <string>Whether the new project should include container view controllers.</string>
+                
+                <key>Identifier</key>
+                <string>useContainerViewControllers</string>
+                
+                <key>Name</key>
+                <string>Include container view controllers</string>
+                
+                <key>SortOrder</key>
+                <integer>1</integer>
+                
+                <key>Type</key>
+                <string>checkbox</string>
+                
+                <key>Units</key>
+                <dict>
+                    <key>false</key>
+                    <array>
+                    </array>
+                    
+                    <key>true</key>
+                    <array>
+                        <dict>
+                            <key>Definitions</key>
+                            <dict>
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___SwitchViewController.h</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>SwitchViewController.h</string>
+                                </dict>
+                                <key>Controllers/___VARIABLE_classPrefix:identifier___SwitchViewController.m</key>
+                                <dict>
+                                    <key>Group</key>
+                                    <array>
+                                        <string>Controllers</string>
+                                        <string>Abstract</string>
+                                    </array>
+                                    <key>Path</key>
+                                    <string>SwitchViewController.m</string>
+                                </dict>
+                            </dict>
+                            
+                            <key>Nodes</key>
+                            <array>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___SwitchViewController.h</string>
+                                <string>Controllers/___VARIABLE_classPrefix:identifier___SwitchViewController.m</string>
+                            </array>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </array>
+        
+        <key>SortOrder</key>
+        <integer>1</integer>
+    </dict>
+</plist>

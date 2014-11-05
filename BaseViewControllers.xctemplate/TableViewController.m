@@ -11,6 +11,7 @@
 #pragma mark - ___VARIABLE_classPrefix:identifier___TableViewController
 
 @interface ___VARIABLE_classPrefix:identifier___TableViewController () {
+    BOOL _tableViewConstraintsNeedsUpdate;
     BOOL _needsReload;
 }
 
@@ -56,6 +57,7 @@
     _reloadOnAppearsFirstTime = YES;
     _clearsSelectionOnViewWillAppear = YES;
     _clearsSelectionOnReloadData = NO;
+    _tableViewConstraintsNeedsUpdate = NO;
 }
 
 #pragma mark View
@@ -64,7 +66,7 @@
     [super loadView];
     
     if (!self.isViewLoaded) {
-        self.view = [UIView new];
+        self.view = [[UIView alloc] init];
     }
     
     if (!_tableView) {
@@ -111,6 +113,20 @@
     }
 }
 
+#pragma mark Constraints
+
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+    
+    if (_tableViewConstraintsNeedsUpdate) {
+        _tableViewConstraintsNeedsUpdate = NO;
+        
+        NSDictionary * views = @{@"tableView"   : self.tableView};
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
+    }
+}
+
 #pragma mark Editing
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -140,12 +156,10 @@
             }
             
             if (!tableView.superview && self.isViewLoaded) {
+                _tableViewConstraintsNeedsUpdate = YES;
                 tableView.translatesAutoresizingMaskIntoConstraints = NO;
                 [self.view addSubview:tableView];
-                
-                NSDictionary * views = @{@"tableView"   : tableView};
-                [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
-                [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
+                [self.view setNeedsUpdateConstraints];
             }
         }
     }

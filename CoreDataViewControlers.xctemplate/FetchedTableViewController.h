@@ -52,3 +52,9 @@
 - (id)objectForController:(NSFetchedResultsController *)controller viewIndexPath:(NSIndexPath *)viewIndexPath;
 
 @end
+
+@interface ___VARIABLE_classPrefix:identifier___FetchedTableViewController (___VARIABLE_classPrefix:identifier___Notifications)
+
+- (void)currentLocaleDidChangeNotification:(NSNotification *)aNotification;
+
+@end

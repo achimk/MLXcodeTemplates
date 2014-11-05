@@ -23,6 +23,7 @@
         <string>com.mlcontrollerspack.BaseStructure</string>
         <string>com.mlcontrollerspack.BaseViewControllers</string>
         <string>com.mlcontrollerspack.CoreDataViewControllers</string>
+        <string>com.mlcontrollerspack.ContainerViewControllers</string>
         <string>com.mlcontrollerspack.CocoaPods</string>
         <string>com.mlcontrollerspack.Gitignore</string>
 	</array>

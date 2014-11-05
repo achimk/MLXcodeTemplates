@@ -11,6 +11,7 @@
 #pragma mark - ___VARIABLE_classPrefix:identifier___CollectionViewController
 
 @interface ___VARIABLE_classPrefix:identifier___CollectionViewController () {
+    BOOL _collectionViewConstraintsNeedsUpdate;
     BOOL _needsReload;
 }
 
@@ -59,6 +60,7 @@
     _reloadOnAppearsFirstTime = YES;
     _clearsSelectionOnViewWillAppear = YES;
     _clearsSelectionOnReloadData = NO;
+    _collectionViewConstraintsNeedsUpdate = NO;
 }
 
 #pragma mark View
@@ -67,11 +69,11 @@
     [super loadView];
     
     if (!self.isViewLoaded) {
-        self.view = [UIView new];
+        self.view = [[UIView alloc] init];
     }
     
     if (!_collectionView) {
-        UICollectionViewLayout * layout = [[[self class] defaultCollectionViewLayoutClass] new];
+        UICollectionViewLayout * layout = [[[[self class] defaultCollectionViewLayoutClass] alloc] init];
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     }
 }
@@ -113,6 +115,20 @@
     }
 }
 
+#pragma mark Constraints
+
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+    
+    if (_collectionViewConstraintsNeedsUpdate) {
+        _collectionViewConstraintsNeedsUpdate = NO;
+        
+        NSDictionary * views = @{@"collectionView"  : self.collectionView};
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[collectionView]|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[collectionView]|" options:0 metrics:nil views:views]];
+    }
+}
+
 #pragma mark Accessors
 
 - (void)setCollectionView:(UICollectionView *)collectionView {
@@ -135,12 +151,10 @@
             }
             
             if (!collectionView.superview && self.isViewLoaded) {
+                _collectionViewConstraintsNeedsUpdate = YES;
                 collectionView.translatesAutoresizingMaskIntoConstraints = NO;
                 [self.view addSubview:collectionView];
-                
-                NSDictionary * views = @{@"collectionView"  : collectionView};
-                [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[collectionView]|" options:0 metrics:nil views:views]];
-                [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[collectionView]|" options:0 metrics:nil views:views]];
+                [self.view setNeedsUpdateConstraints];
             }
         }
     }
