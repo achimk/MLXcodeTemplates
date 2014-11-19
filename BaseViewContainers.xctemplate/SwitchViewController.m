@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic, readwrite, strong) IBOutlet UIView * containerView;
+@property (nonatomic, readwrite, assign) BOOL forwardSelectedViewControllerAppearance;
 
 @end
 
@@ -46,6 +47,23 @@
     
     if (self.viewControllers.count && !self.selectedViewController) {
         self.selectedViewController = self.viewControllers[0];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (self.forwardSelectedViewControllerAppearance) {
+        [self.selectedViewController beginAppearanceTransition:YES animated:animated];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (self.forwardSelectedViewControllerAppearance) {
+        [self.selectedViewController endAppearanceTransition];
+        self.forwardSelectedViewControllerAppearance = NO;
     }
 }
 
@@ -110,6 +128,7 @@
         _selectedViewController = selectedViewController;
         
         if (self.isViewLoaded) {
+            self.forwardSelectedViewControllerAppearance = !self.isViewVisible;
             [self replaceViewController:previousViewController
                      withViewController:selectedViewController
                         inContainerView:self.containerView
